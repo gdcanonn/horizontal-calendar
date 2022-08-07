@@ -1,0 +1,11 @@
+@mixin grow-animation {
+  animation-name: grow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@mixin resize($value) {
+  .mainContent {
+    font-size: $value;
+  }
+}

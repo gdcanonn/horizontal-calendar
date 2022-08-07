@@ -1,0 +1,84 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.boxContent {
+  display: flex;
+  justify-content: space-around;
+  background: $secondary-gray;
+}
+
+.boxDay {
+  width: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75em 0.35em;
+  background: $secondary-gray;
+
+  &Num {
+    padding: 0.75em 0.35em;
+  }
+
+  &Bottom {
+    margin: 0.8em 0;
+    min-height: 0.75em;
+    min-width: 0.75em;
+
+    &Dot {
+      height: 0.75em;
+      width: 0.75em;
+      background: $primary-active;
+      border-radius: 50%;
+      display: inline-block;
+
+      &Blue {
+        background: $primary-active-blue;
+      }
+
+      &Active {
+        background: $white;
+      }
+    }
+  }
+
+  &Active {
+    background: $primary-active;
+    color: $white;
+
+    &Blue {
+      background: $primary-active-blue;
+    }
+  }
+
+  &OtherMonth {
+    opacity: 0.4;
+  }
+
+  &:hover {
+    &:not(.boxDayActive) {
+      cursor: pointer;
+      background: $secondary-active;
+    }
+
+    & > .boxDayNum {
+      @include grow-animation;
+    }
+  }
+
+  &Blue:hover {
+    &:not(.boxDayActiveBlue) {
+      cursor: pointer;
+      background: $secondary-active-blue;
+    }
+
+    & > .boxDayNum {
+      @include grow-animation;
+    }
+  }
+} 
+
+// Animation
+@keyframes grow {
+  from { transform: scale(1); }
+  to { transform: scale(1.5); }
+}

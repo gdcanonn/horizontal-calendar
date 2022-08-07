@@ -1,0 +1,63 @@
+@import "./assets/styles/variables.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background: $white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  padding-bottom: 5em;
+}
+
+.box {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: $brown;
+  padding: 0.5em 0;
+}
+
+section > p {
+  color: $brown;
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 2em 2.5em;
+
+  & .Green {
+    color: $primary-active;
+    font-size: bold;
+  }
+
+  & .Blue {
+    color: $primary-active-blue;
+    font-size: bold;
+  }
+}
+
+// Responsiveness
+@media (max-width: $tablet) {
+  section > p {
+    margin: 2em 0.8em;
+  }
+}
+
+@media (min-width: $laptop) {
+  section > p {
+    margin: 2em 0;
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.mainContent {
+  font-size: 100%;
+  width: 50em;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.75em;
+  background: $primary-gray;
+
+  & > span {
+    font-weight: bold;
+  }
+}
+
+.imgArrow {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+
+  &LeftBlue {
+    content:url('../../../public/icons/arrow-left-blue.png');
+  }
+
+  &RightBlue {
+    content:url('../../../public/icons/arrow-right-blue.png');
+  }
+}
+
+// Responsiveness
+@media (max-width: $mobile) {
+  @include resize(50%);
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  @include resize(60%);
+}
+
+@media (min-width: $tablet) and (max-width: $laptop) {
+  @include resize(80%);
+}
+
+@media (min-width: $large-screen) {
+  @include resize(100%);
+}
