@@ -40,6 +40,7 @@ const DaysCalendar: React.FC<DaysCalendarProps> = ({ date, holidays, theme, chan
     const weekday = originalDate.getDay() !== 0 ? originalDate.getDay() : 7
     const firstDay = new Date(originalDate.setDate(originalDate.getDate() - weekday))
     calculateDays(firstDay)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [date])
 
   return (
