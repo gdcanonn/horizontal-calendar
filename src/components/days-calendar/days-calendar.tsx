@@ -16,13 +16,6 @@ interface DaysCalendarProps {
 const DaysCalendar: React.FC<DaysCalendarProps> = ({ date, holidays, theme, changeSelectedDay }: DaysCalendarProps) => {
   const [visiblesDays, setVisiblesDays] = useState<DayCalendar[]>([])
 
-  useEffect(() => {
-    const originalDate = new Date(date.getTime())
-    const weekday = originalDate.getDay() !== 0 ? originalDate.getDay() : 7
-    const firstDay = new Date(originalDate.setDate(originalDate.getDate() - weekday))
-    calculateDays(firstDay)
-  }, [date])
-
   const calculateDays = (firstDay: Date) => {
     const dayList: DayCalendar[] = []
     for (let day = 0; day < 7; day++) {
@@ -41,6 +34,13 @@ const DaysCalendar: React.FC<DaysCalendarProps> = ({ date, holidays, theme, chan
     }
     setVisiblesDays(dayList)
   }
+
+  useEffect(() => {
+    const originalDate = new Date(date.getTime())
+    const weekday = originalDate.getDay() !== 0 ? originalDate.getDay() : 7
+    const firstDay = new Date(originalDate.setDate(originalDate.getDate() - weekday))
+    calculateDays(firstDay)
+  }, [date])
 
   return (
     <div className={styles.boxContent}>

@@ -3,6 +3,8 @@ import { Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, Theme } fro
 import styles from './horizontal-calendar.module.scss'
 import DaysCalendar from "../days-calendar/days-calendar";
 import { CalendarTheme, DayCalendar } from "../../utils/@types";
+import arrowLeft from '../../assets/images/icons/arrow-left.png';
+import arrowRight from '../../assets/images/icons/arrow-right.png';
 import cx from 'classnames'
 
 const months = [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec];
@@ -32,13 +34,13 @@ const HorizontalCalendar: React.FC<HorizontalCalendarProps> = ({ day, theme = 'g
   return (
     <div className={styles.mainContent}>
       <div className={styles.header}>
-        <img src={process.env.PUBLIC_URL + 'icons/arrow-left.png'}
+        <img src={arrowLeft}
           className={cx(styles.imgArrow, { [styles.imgArrowLeftBlue]: theme === Theme.BLUE })}
           alt='go-left-calendar' onClick={previousDay} />
 
         <h3>{months[selectedDay.getMonth()].substring(0, 3)} {selectedDay.getDate()}</h3>
 
-        <img src={process.env.PUBLIC_URL + 'icons/arrow-right.png'}
+        <img src={arrowRight}
           className={cx(styles.imgArrow, { [styles.imgArrowRightBlue]: theme === Theme.BLUE })}
           alt='go-right-calendar' onClick={nextDay} />
       </div>
