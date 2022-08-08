@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { CalendarTheme, DayCalendar } from "../../utils/@types"
-import { getWeekDay, isHoliday } from "../../utils/utils"
+import { CalendarTheme, DayCalendar } from "utils/@types"
+import { getWeekDay, isHoliday } from "utils/utils"
+import { Theme } from "utils/constants"
 import styles from './days-calendar.module.scss'
 import cx from 'classnames'
-import { Theme } from "../../utils/constants"
 
 interface DaysCalendarProps {
   date: Date,

@@ -14,6 +14,9 @@ To run the project execute
 > `npm start`
 > 
 
+## Demo
+
+See demo [here](https://codesandbox.io/s/pensive-wescoff-l88h3t)
 
 ## Learn More
 

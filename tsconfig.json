@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "target": "es5",

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, Theme } from "../../utils/constants";
+import { Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, Theme } from "utils/constants";
+import arrowLeft from 'assets/images/icons/arrow-left.png';
+import arrowRight from 'assets/images/icons/arrow-right.png';
+import DaysCalendar from "components/days-calendar/days-calendar";
+import { CalendarTheme, DayCalendar } from "utils/@types";
 import styles from './horizontal-calendar.module.scss'
-import DaysCalendar from "../days-calendar/days-calendar";
-import { CalendarTheme, DayCalendar } from "../../utils/@types";
-import arrowLeft from '../../assets/images/icons/arrow-left.png';
-import arrowRight from '../../assets/images/icons/arrow-right.png';
 import cx from 'classnames'
 
 const months = [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec];

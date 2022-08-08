@@ -1,5 +1,5 @@
-@import "../../assets/styles/variables.scss";
-@import "../../assets/styles/mixins.scss";
+@import "assets/styles/variables.scss";
+@import "assets/styles/mixins.scss";
 
 .mainContent {
   font-size: 100%;
@@ -25,11 +25,11 @@
   cursor: pointer;
 
   &LeftBlue {
-    content: url('icons/arrow-left-blue.png');
+    content: url('../../assets/images/icons/arrow-left-blue.png');
   }
 
   &RightBlue {
-    content: url('icons/arrow-right-blue.png');
+    content: url('../../assets/images/icons/arrow-right-blue.png');
   }
 }
 
